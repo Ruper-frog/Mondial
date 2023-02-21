@@ -33,13 +33,13 @@ namespace CountryFifaHouses
             {
                 if (fifaHouses[i] == country) // checks to see if the inputted country exists in the file.
                 {
-                    char Group = (char)(97 + i / 8); // each group is made of 4 countries so each group we pass we want to add one to the Group variable.
+                    char Group = (char)('A' + i / 8); // each group is made of 4 countries so each group we pass we want to add one to the Group variable.
 
                     Console.WriteLine("\nThe Country is in Group: {0}", Group);
                     Console.WriteLine("\nThe Countries that are in the same group are:");
 
                     i -= i % 8; // we want to jump to the first country in the group.
-                    for (int j = 1; j < 5; j++) // for there all we gonna do is to run a loop 4 times to write which team is in the group as well And we want to ignore the requested team.
+                    for (int j = 1; j < 5; j++) // from there all we gonna do is to run a loop 4 times to write which team is in the group And we'll want to ignore the requested team.
                     {
                         if (fifaHouses[i] != country) // checking if that's the requested team.
                             Console.Write(fifaHouses[i] + "\t|\t"); // printing each team.
@@ -51,7 +51,6 @@ namespace CountryFifaHouses
                 }
             }
             if (!isFound) // only true if the inputted country exists in the file.
-                          // (and therefore, plays in the world cup).
             {
                 Console.WriteLine();
                 Console.WriteLine("The country you have entered is invalid.");// prints incorrect input message.
