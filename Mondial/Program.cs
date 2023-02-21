@@ -17,7 +17,7 @@ namespace CountryFifaHouses
         { // checks if the inputted country is in the fifa world cup and prints the other countries in its group and
             // the group the inputted country is in.
 
-            const string location = "C:\\Visual Studio" + // file location
+            const string location = "C:\\Users\\USER\\source\\repos\\Visual Studio\\Visual Studio Documents\\Text File" + // file location
             "\\score.txt"; // on the computer. change if needed.
 
             string[] fifaHouses = System.IO.File.ReadAllLines(location); // moving .txt file info to a string array.
